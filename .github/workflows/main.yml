@@ -1,4 +1,4 @@
-name: MAIN CI
+name: Test-And-Start
 
 on:
   push:
@@ -18,6 +18,9 @@ jobs:
       run: make test
 
     - name: Lint start
-    - run: make lint
+      run: make lint
+
+    - name: Cli start
+      run: make start
 
 
