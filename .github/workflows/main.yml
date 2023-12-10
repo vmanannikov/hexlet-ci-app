@@ -1,16 +1,16 @@
 name: MAIN CI
 
 on:
-  push: 
-  branches: [ "main" ]
+  push:
+    branches: [ "main" ]
 
   jobs:
     build:
       runs-on: ubuntu-latest
 
-      steps: 
+      steps:
       - uses: actions/checkout@v3
-      
+
       - name: Setup
       - run: make setup
 
@@ -18,6 +18,6 @@ on:
       - run: make test
 
       - name: Lint start
-      - run: make lint 
+      - run: make lint
 
-      
+
