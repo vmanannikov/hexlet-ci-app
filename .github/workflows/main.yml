@@ -12,10 +12,10 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Setup
-    - run: make setup
+      run: make setup
 
     - name: Test start
-    - run: make test
+      run: make test
 
     - name: Lint start
     - run: make lint
