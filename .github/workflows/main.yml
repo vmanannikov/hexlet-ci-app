@@ -1,0 +1,23 @@
+name: MAIN CI
+
+on:
+  push: 
+  branches: [ "main" ]
+
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+
+      steps: 
+      - uses: actions/checkout@v3
+      
+      - name: Setup
+      - run: make setup
+
+      -name: Test start
+      - run: make test
+
+      - name: Lint start
+      - run: make lint 
+
+      
