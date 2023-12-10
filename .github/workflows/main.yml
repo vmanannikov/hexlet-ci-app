@@ -14,7 +14,7 @@ on:
       - name: Setup
       - run: make setup
 
-      -name: Test start
+      - name: Test start
       - run: make test
 
       - name: Lint start
