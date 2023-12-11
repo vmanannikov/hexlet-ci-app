@@ -20,4 +20,12 @@ jobs:
     - name: Lint start
       run: make lint
 
+    - name: Run Snyk to check for vulnerabilities
+      uses: snyk/actions/node@master
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+    - name: NPM Cache
+      uses: actions/setup-node@v3
+      with:
+        cache: 'npm'
 
