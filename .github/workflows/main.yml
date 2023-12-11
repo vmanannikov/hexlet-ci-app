@@ -20,7 +20,4 @@ jobs:
     - name: Lint start
       run: make lint
 
-    - name: Cli start
-      run: make start
-
 
